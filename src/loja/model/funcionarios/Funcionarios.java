@@ -11,7 +11,9 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+import loja.model.cargo.Cargo;
 import loja.model.empresa.Empresa;
+import loja.model.funcaosistema.FuncaoSistema;
 
 /**
  *
@@ -26,5 +28,11 @@ public class Funcionarios
     private String nome;
     private String cpf;
     @ManyToOne
-    private Empresa empresa;
+    private Empresa idEmpresa;
+    
+    @ManyToOne
+    private FuncaoSistema idFuncaoSistema;
+    
+    @ManyToOne
+    private Cargo idCargo;
 }

@@ -6,11 +6,15 @@
 package loja.model.cargo;
 
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import loja.model.contracts.ICargoDAO;
+import loja.model.funcionarios.Funcionarios;
 
 /**
  *
@@ -23,8 +27,13 @@ public class Cargo
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer idCargo;
-    private String nome;
+    
+    @Enumerated(EnumType.STRING)
+    private TipoCargo nome;
 
+    @OneToMany(mappedBy = "Funcionarios")
+    private Funcionarios idFuncionarios;    
+    
     public Integer getIdCargo()
     {
         return idCargo;
@@ -33,15 +42,5 @@ public class Cargo
     public void setIdCargo(Integer idCargo)
     {
         this.idCargo = idCargo;
-    }
-
-    public String getNome()
-    {
-        return nome;
-    }
-
-    public void setNome(String nome)
-    {
-        this.nome = nome;
     }
 }

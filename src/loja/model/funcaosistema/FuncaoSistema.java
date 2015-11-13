@@ -9,7 +9,9 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
+import loja.model.funcionarios.Funcionarios;
 
 /**
  *
@@ -23,6 +25,14 @@ public class FuncaoSistema
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer idFuncaoSistema;
     private String nome;
+    
+    @OneToMany(mappedBy = "Funcionarios")
+    private Funcionarios idFuncionarios;
+
+    public Funcionarios getIdFuncionarios()
+    {
+        return idFuncionarios;
+    }
 
     public Integer getIdFuncaoSistema()
     {
