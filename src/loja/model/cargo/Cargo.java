@@ -31,6 +31,11 @@ public class Cargo
     @Enumerated(EnumType.STRING)
     private TipoCargo nome;
 
+    public TipoCargo getNome()
+    {
+        return nome;
+    }
+
     @OneToMany(mappedBy = "Funcionarios")
     private Funcionarios idFuncionarios;    
     

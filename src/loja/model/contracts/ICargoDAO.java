@@ -5,11 +5,14 @@
  */
 package loja.model.contracts;
 
+import javafx.collections.ObservableList;
+import loja.model.cargo.Cargo;
+
 /**
  *
  * @author tiflami
  */
 public interface ICargoDAO
 {
-    
+    public ObservableList<Cargo> list();
 }

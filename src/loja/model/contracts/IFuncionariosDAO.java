@@ -5,11 +5,19 @@
  */
 package loja.model.contracts;
 
+import java.util.List;
+import javafx.collections.ObservableList;
+import loja.model.funcionarios.Funcionarios;
+
 /**
  *
  * @author tiflami
  */
 public interface IFuncionariosDAO
 {
-    
+     public void add(Funcionarios cliente);
+    public void delete(Funcionarios cliente);
+    public ObservableList<Funcionarios> list ();
+    public boolean findByName (String name);
+    public boolean findByCpf(String cpf);
 }
