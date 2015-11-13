@@ -24,8 +24,8 @@ public class CargoDAO implements ICargoDAO
     {
         EntityManager manager = new JPAUtil().getEntityManager();
         Query query = manager.createQuery("select c from Cargo c");
-        ObservableList<Cargo> list = FXCollections.observableArrayList(query.getResultList());
-        return list;
+        ObservableList<Cargo> listData = FXCollections.observableArrayList(query.getResultList());
+        return listData;
     }
     
 }

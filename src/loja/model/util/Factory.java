@@ -33,7 +33,7 @@ public class Factory
         return new Cargo ();
     }
     
-    public static ICargoDAO createCargoDAO()
+    public static CargoDAO createCargoDAO()
     {
         return new CargoDAO ();
     }

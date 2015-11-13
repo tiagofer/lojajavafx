@@ -7,6 +7,8 @@ package loja.controller.funcionarios;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
@@ -17,6 +19,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import loja.model.cargo.Cargo;
 import loja.model.cargo.CargoDAO;
+import loja.model.cargo.TipoCargo;
 import loja.model.contracts.ICargoDAO;
 import loja.model.funcionarios.Funcionarios;
 import loja.model.util.Factory;
@@ -55,7 +58,7 @@ public class FuncionariosController implements Initializable
     private TableColumn<String, Funcionarios> tblColCpf;
 
     @FXML
-    private ComboBox<?> cbBoxCargo;
+    private ComboBox<Cargo> cbBoxCargo;
 
     @FXML
     private TableColumn<String, Funcionarios> tblColCargo;
@@ -72,18 +75,24 @@ public class FuncionariosController implements Initializable
     @FXML
     private Button btnDel;
     
-    private ICargoDAO cargo;
+    private CargoDAO cargodao;
+  
     
     public FuncionariosController ()
     {
-        cargo = Factory.createCargoDAO();
-        cbBoxCargo.getItems().addAll(cargo.list());
+       
     }
 
     @Override
     public void initialize(URL location, ResourceBundle resources)
     {
        
+    }
+    
+    public void configureComboBox()
+    {
+        cargodao = Factory.createCargoDAO();
+        cbBoxCargo.setItems(cargodao.list());
     }
     
 }
