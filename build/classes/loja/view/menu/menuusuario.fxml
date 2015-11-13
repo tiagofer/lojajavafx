@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="menuPane" prefHeight="800.0" prefWidth="1280.0" style="-fx-max-width: 1280; -fx-max-height: 800;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <HBox fx:id="hBoxPane" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="100.0" prefWidth="1280.0" style="-fx-background-color: PaleTurquoise;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Bem Vindo ao Modulo Usuario">
+               <font>
+                  <Font size="41.0" />
+               </font>
+            </Text>
+         </children>
+      </HBox>
+      <HBox fx:id="hBoxMenu" alignment="CENTER" layoutX="-6.0" layoutY="300.0" prefHeight="200.0" prefWidth="1280.0" spacing="100.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <Button fx:id="btnClient" mnemonicParsing="false" text="Cadastrar Clientes" textAlignment="CENTER">
+               <graphic>
+                  <ImageView fx:id="imgSales" fitHeight="128.0" fitWidth="128.0" focusTraversable="true" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../LojaDeRoubas/src/lojaroupa/menu/view/img/modules/clients.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btnProdutos" mnemonicParsing="false" text="Cadastrar Produtos">
+               <graphic>
+                  <ImageView fx:id="imgClients" fitHeight="128.0" fitWidth="128.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../LojaDeRoubas/src/lojaroupa/menu/view/img/modules/products.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btnVendas" mnemonicParsing="false" text="Vendas">
+               <graphic>
+                  <ImageView fx:id="imgProducts" fitHeight="128.0" fitWidth="128.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../LojaDeRoubas/src/lojaroupa/menu/view/img/modules/sales.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
