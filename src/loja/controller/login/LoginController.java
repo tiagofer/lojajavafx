@@ -20,6 +20,9 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import javax.swing.JOptionPane;
+import loja.controller.screen.ILoadScreen;
+import loja.controller.screen.ScreenController;
+import loja.controller.screen.ScreenFramework;
 import loja.model.contracts.IUsuariosDAO;
 import loja.model.usuarios.UsuariosDAO;
 import loja.model.util.Factory;
@@ -32,7 +35,7 @@ import loja.view.menuadm.MainMenuAdm;
  *
  * @author tiflami
  */
-public class LoginController implements Initializable
+public class LoginController implements Initializable, ILoadScreen
 {
     @FXML
     private AnchorPane idAnchorPane;
@@ -54,6 +57,21 @@ public class LoginController implements Initializable
     
     private IUsuariosDAO usuariodao;
     
+    private static String usuarioLogado;
+
+    public static String getUsuarioLogado()
+    {
+        return usuarioLogado;
+    }
+    
+    ScreenController loginController;
+    
+    @Override
+    public void setScreenParent(ScreenController screenPage)
+    {
+        loginController = screenPage;
+    }
+    
     @Override
     public void initialize(URL location, ResourceBundle resources)
     {
@@ -64,13 +82,13 @@ public class LoginController implements Initializable
             @Override
             public void handle(ActionEvent event)
             {
-                logar(usuariodao);
+                logar(usuariodao, event);
             }
             
         });
     }
     
-    public void logar(IUsuariosDAO usuariodao)
+    public void logar(IUsuariosDAO usuariodao, ActionEvent event)
     {
         if ((usuariodao.findByLogin(txLogin.getText())) && (usuariodao.findBySenha(txPassword.getText())))
         {
@@ -78,9 +96,8 @@ public class LoginController implements Initializable
             {
                 try
                 {
-                    MainMenuAdm menu = FactoryView.createMainMenuAdm();
-                    menu.start(new Stage());
-                    MainLogin.getStage().close();
+                    LoginController.usuarioLogado = "admin";
+                    goToMainMenuAdm(event);
                     
                 } catch (Exception e)
                 {
@@ -94,6 +111,7 @@ public class LoginController implements Initializable
                 {
                  try
                 {
+                    LoginController.usuarioLogado = "usu";
                     MainMenu menu = FactoryView.createMainMenu();
                     menu.start(new Stage());
                     MainLogin.getStage().close();
@@ -108,5 +126,10 @@ public class LoginController implements Initializable
             JOptionPane.showMessageDialog(null, "Usuario ou senha incorreto", "Erro",JOptionPane.ERROR_MESSAGE);
         }
     }//fim logar
+    
+    private void goToMainMenuAdm(ActionEvent event)
+    {
+        loginController.setScreen(ScreenFramework.mainMenuAdm);
+    }
 
 }

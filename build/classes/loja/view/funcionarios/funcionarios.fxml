@@ -6,8 +6,7 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-
-<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="loja.controller.funcionarios.FuncionariosController">
    <children>
       <HBox alignment="CENTER" prefHeight="100.0" prefWidth="1280.0" style="-fx-background-color: PaleTurquoise;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
@@ -69,6 +68,21 @@
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+      </GridPane>
+      <GridPane layoutX="786.0" layoutY="667.0" prefHeight="119.0" prefWidth="480.0">
+         <children>
+            <Button fx:id="btnRetornoProdutos" mnemonicParsing="false" onAction="#goToProdutos" prefHeight="25.0" prefWidth="150.0" text="Produtos (F3)" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="CENTER" />
+            <Button fx:id="btnRetornoVendas" mnemonicParsing="false" onAction="#goToVendas" prefHeight="25.0" prefWidth="150.0" text="Vendas (F4)" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.halignment="CENTER" />
+            <Button fx:id="btnRetornoMenu" mnemonicParsing="false" onAction="#goToMenu" prefHeight="25.0" prefWidth="150.0" text="Menu (F2)" textAlignment="CENTER" GridPane.halignment="CENTER" />
+         </children>
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
          </rowConstraints>
       </GridPane>
    </children>

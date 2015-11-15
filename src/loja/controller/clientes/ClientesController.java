@@ -17,12 +17,14 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
+import loja.controller.screen.ILoadScreen;
+import loja.controller.screen.ScreenController;
 import loja.model.clientes.Clientes;
 import loja.model.clientes.ClientesDAO;
 import loja.model.clientes.IClientesDAO;
 import loja.model.util.Factory;
 
-public class ClientesController implements Initializable{
+public class ClientesController extends ClientesScreenController implements Initializable, ILoadScreen{
 
     @FXML
     private Button btnInsert;
@@ -56,6 +58,8 @@ public class ClientesController implements Initializable{
 
     @FXML
     private TextField txClientTel;
+    
+    ScreenController clientesController;
     
     @Override
     public void initialize(URL location, ResourceBundle resources)
@@ -108,5 +112,11 @@ public class ClientesController implements Initializable{
         tblColNome.setCellValueFactory(new PropertyValueFactory<>("nome"));
         tblColTelefone.setCellValueFactory(new PropertyValueFactory<>("telefone"));
         tblColId.setCellValueFactory(new PropertyValueFactory<>("idClientes"));
+    }
+
+    @Override
+    public void setScreenParent(ScreenController screenPage)
+    {
+       clientesController = screenPage;
     }
 }

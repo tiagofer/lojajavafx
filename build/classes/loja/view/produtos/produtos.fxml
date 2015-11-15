@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="loja.controller.produtos.ProdutosController">
+   <children>
+      <GridPane alignment="CENTER" layoutX="786.0" layoutY="101.0" prefHeight="298.0" prefWidth="480.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="101.0">
+         <children>
+            <TextField fx:id="txClientName" prefHeight="25.0" prefWidth="461.0" GridPane.columnIndex="1" />
+            <TextField fx:id="txClientAdress" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="txClientTel" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="txClientCel" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Button fx:id="btnInsert" mnemonicParsing="false" prefHeight="25.0" prefWidth="150.0" text="Cadastrar (F5)" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <Label text="Nome" />
+            <Label text="Descricao" GridPane.rowIndex="1" />
+            <Label text="Valor" GridPane.rowIndex="2" />
+            <Label text="Quantidade" GridPane.rowIndex="3" />
+            <Button fx:id="btnDel" mnemonicParsing="false" prefHeight="25.0" prefWidth="150.0" text="Excluir (F7)" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <Button fx:id="btnUpdate" mnemonicParsing="false" prefHeight="25.0" prefWidth="150.0" text="Atualizar (F6)" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+         </children>
+         <columnConstraints>
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="175.0" minWidth="3.0" prefWidth="91.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="530.0" minWidth="321.0" prefWidth="419.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+      </GridPane>
+      <TableView fx:id="tblProdutosList" layoutY="100.0" prefHeight="698.0" prefWidth="777.0" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="503.0" AnchorPane.topAnchor="100.0">
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+         <columns>
+            <TableColumn fx:id="tblColId" prefWidth="68.0" text="id" />
+            <TableColumn fx:id="tblColNome" prefWidth="236.0" text="Nome" />
+            <TableColumn fx:id="tblColDescricao" prefWidth="75.0" text="Descricao" />
+            <TableColumn fx:id="tblColValor" prefWidth="75.0" text="Valor" />
+            <TableColumn fx:id="tblColQuantidade" minWidth="0.0" prefWidth="0.0" text="Quantidade" />
+         </columns>
+      </TableView>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="1280.0" style="-fx-background-color: PaleTurquoise;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Modulo Produtos">
+               <font>
+                  <Font size="46.0" />
+               </font>
+            </Text>
+         </children>
+      </HBox>
+      <GridPane layoutX="786.0" layoutY="667.0" prefHeight="119.0" prefWidth="480.0">
+         <children>
+            <Button fx:id="btnRetornoClientes" mnemonicParsing="false" onAction="#goToClientes" prefHeight="25.0" prefWidth="150.0" text="Clientes (F3)" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="CENTER" />
+            <Button fx:id="btnRetornoVendas" mnemonicParsing="false" onAction="#goToVendas" prefHeight="25.0" prefWidth="150.0" text="Vendas (F4)" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.halignment="CENTER" />
+            <Button fx:id="btnRetornoMenu" mnemonicParsing="false" onAction="#goToMenu" prefHeight="25.0" prefWidth="150.0" text="Menu (F2)" textAlignment="CENTER" GridPane.halignment="CENTER" />
+         </children>
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+         </rowConstraints>
+      </GridPane>
+   </children>
+</AnchorPane>

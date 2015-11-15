@@ -5,15 +5,14 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane fx:id="idAnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
-fx:controller="loja.controller.login.LoginController">
+<AnchorPane fx:id="idAnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="loja.controller.login.LoginController">
    <children>
-      <Label fx:id="lbLogin" layoutX="245.0" layoutY="246.0" text="Login" />
-      <TextField fx:id="txLogin" layoutX="315.0" layoutY="241.0" />
-      <PasswordField fx:id="txPassword" layoutX="315.0" layoutY="288.0" />
-      <Label fx:id="lbPassword" layoutX="245.0" layoutY="293.0" text="Password" />
-      <Button fx:id="btnLogin" graphicTextGap="5.0" layoutX="370.0" layoutY="344.0" mnemonicParsing="false" style="-fx-background-color: SkyBlue;" text="Login" textAlignment="CENTER" />
-      <Text layoutX="253.0" layoutY="176.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Loja de Roupas">
+      <Label fx:id="lbLogin" layoutX="498.0" layoutY="322.0" text="Login" AnchorPane.bottomAnchor="463.0" AnchorPane.leftAnchor="498.0" AnchorPane.rightAnchor="746.0" AnchorPane.topAnchor="322.0" />
+      <TextField fx:id="txLogin" layoutX="568.0" layoutY="317.0" AnchorPane.bottomAnchor="458.0" AnchorPane.leftAnchor="568.0" AnchorPane.rightAnchor="541.0" AnchorPane.topAnchor="317.0" />
+      <PasswordField fx:id="txPassword" layoutX="568.0" layoutY="364.0" AnchorPane.bottomAnchor="411.0" AnchorPane.leftAnchor="568.0" AnchorPane.rightAnchor="541.0" AnchorPane.topAnchor="364.0" />
+      <Label fx:id="lbPassword" layoutX="498.0" layoutY="369.0" text="Password" AnchorPane.bottomAnchor="416.0" AnchorPane.leftAnchor="498.0" AnchorPane.rightAnchor="720.0" AnchorPane.topAnchor="369.0" />
+      <Button fx:id="btnLogin" graphicTextGap="5.0" layoutX="623.0" layoutY="420.0" mnemonicParsing="false" style="-fx-background-color: SkyBlue;" text="Login" textAlignment="CENTER" AnchorPane.bottomAnchor="355.0" AnchorPane.leftAnchor="623.0" AnchorPane.rightAnchor="603.0" AnchorPane.topAnchor="420.0" />
+      <Text layoutX="506.0" layoutY="252.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Loja de Roupas" AnchorPane.bottomAnchor="539.509765625" AnchorPane.leftAnchor="506.0" AnchorPane.rightAnchor="498.4453125" AnchorPane.topAnchor="218.583984375">
          <font>
             <Font size="36.0" />
          </font>

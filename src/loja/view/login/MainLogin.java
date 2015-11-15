@@ -14,12 +14,13 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
+import loja.controller.screen.ScreenController;
 
 /**
  *
  * @author tiflami
  */
-public class MainLogin extends Application
+public class MainLogin extends Application 
 {
     
    private static Stage stage;
@@ -27,12 +28,15 @@ public class MainLogin extends Application
     @Override
     public void start(Stage stage) throws Exception
     {
-        Parent parent = FXMLLoader.load(getClass().getResource("login.fxml"));
+//        ScreenController screenController = new ScreenController();
+        Parent parent = FXMLLoader.load(getClass().getResource("/loja/view/clientes/clientes.fxml"));
         Scene scene = new Scene(parent);
         stage.setScene(scene);
         stage.setTitle("Login - Loja FX");
         stage.show();
         MainLogin.stage = stage;
+//        ScreenController.setStages(MainLogin.stage);
+//        screenController.addScreen(MainLogin.stage);
     }
     
     public static Stage getStage()

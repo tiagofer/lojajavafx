@@ -27,6 +27,7 @@ public class MainMenu extends Application
         stage.setScene(scene);
         stage.setTitle("Modulo Vendedor - Loja FX");
         stage.show();
+        MainMenu.stage = stage;
     }
     
     public static Stage getStage()

@@ -10,6 +10,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import loja.controller.screen.ScreenController;
 
 /**
  *
@@ -27,6 +28,8 @@ public class MainMenuAdm extends Application
         stage.setScene(scene);
         stage.setTitle("Modulo Administrativo - Loja FX");
         stage.show();
+        MainMenuAdm.stage = stage;
+//        ScreenController.setStages(MainMenuAdm.stage);
     }
     
     public static Stage getStage()

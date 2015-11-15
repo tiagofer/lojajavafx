@@ -10,6 +10,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import loja.controller.screen.ScreenController;
 
 /**
  *
@@ -27,6 +28,8 @@ public class MainClientes extends Application
         stage.setScene(scene);
         stage.setTitle("Cadastro de Clientes - Loja FX");
         stage.show();
+        MainClientes.stage = stage;
+//        ScreenController.setStages(MainClientes.stage);
     }
     
     public static Stage getStage()
