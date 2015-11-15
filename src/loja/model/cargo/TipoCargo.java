@@ -11,5 +11,5 @@ package loja.model.cargo;
  */
 public enum TipoCargo
 {
-    VENDEDOR, GERENTE;
+    vendedor, gerente;
 }

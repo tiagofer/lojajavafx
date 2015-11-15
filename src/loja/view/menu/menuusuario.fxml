@@ -25,7 +25,7 @@
                <graphic>
                   <ImageView fx:id="imgSales" fitHeight="128.0" fitWidth="128.0" focusTraversable="true" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../../../../LojaDeRoubas/src/lojaroupa/menu/view/img/modules/clients.png" />
+                        <Image url="@../../../resources/img/clients.png" />
                      </image>
                   </ImageView>
                </graphic>
@@ -34,7 +34,7 @@
                <graphic>
                   <ImageView fx:id="imgClients" fitHeight="128.0" fitWidth="128.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../../../../LojaDeRoubas/src/lojaroupa/menu/view/img/modules/products.png" />
+                        <Image url="@../../../resources/img/products.png" />
                      </image>
                   </ImageView>
                </graphic>
@@ -43,7 +43,7 @@
                <graphic>
                   <ImageView fx:id="imgProducts" fitHeight="128.0" fitWidth="128.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../../../../LojaDeRoubas/src/lojaroupa/menu/view/img/modules/sales.png" />
+                        <Image url="@../../../resources/img/sales.png" />
                      </image>
                   </ImageView>
                </graphic>

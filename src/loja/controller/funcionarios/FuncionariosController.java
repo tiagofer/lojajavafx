@@ -21,6 +21,7 @@ import loja.model.cargo.Cargo;
 import loja.model.cargo.CargoDAO;
 import loja.model.cargo.TipoCargo;
 import loja.model.contracts.ICargoDAO;
+import loja.model.funcaosistema.FuncaoSistema;
 import loja.model.funcionarios.Funcionarios;
 import loja.model.util.Factory;
 
@@ -37,7 +38,7 @@ public class FuncionariosController implements Initializable
     private TableColumn<String, Funcionarios> tblColId;
 
     @FXML
-    private ComboBox<?> cbBoxFuncaoSistema;
+    private ComboBox<FuncaoSistema> cbBoxFuncaoSistema;
 
     @FXML
     private Button btnInsert;

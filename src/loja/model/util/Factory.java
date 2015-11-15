@@ -11,6 +11,10 @@ import loja.model.clientes.Clientes;
 import loja.model.clientes.ClientesDAO;
 import loja.model.clientes.IClientesDAO;
 import loja.model.contracts.ICargoDAO;
+import loja.model.contracts.IFuncionariosDAO;
+import loja.model.contracts.IUsuariosDAO;
+import loja.model.funcionarios.FuncionariosDAO;
+import loja.model.usuarios.UsuariosDAO;
 
 /**
  *
@@ -36,5 +40,15 @@ public class Factory
     public static CargoDAO createCargoDAO()
     {
         return new CargoDAO ();
+    }
+    
+    public static IFuncionariosDAO createFuncionarioDAO ()
+    {
+        return new FuncionariosDAO ();
+    }
+
+    public static IUsuariosDAO createUsuariosDAO ()
+    {
+        return new UsuariosDAO ();
     }
 }

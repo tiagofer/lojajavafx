@@ -7,6 +7,8 @@ package loja.model.util;
 
 import loja.view.clientes.MainClientes;
 import loja.view.login.MainLogin;
+import loja.view.menu.MainMenu;
+import loja.view.menuadm.MainMenuAdm;
 
 /**
  *
@@ -22,5 +24,15 @@ public class FactoryView
     public static MainClientes createMainClientes()
     {
         return new MainClientes();
+    }
+    
+    public static MainMenu createMainMenu()
+    {
+        return new MainMenu();
+    }
+    
+    public static MainMenuAdm createMainMenuAdm()
+    {
+        return new MainMenuAdm ();
     }
 }

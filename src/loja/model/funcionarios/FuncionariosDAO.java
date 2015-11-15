@@ -40,7 +40,7 @@ public class FuncionariosDAO implements IFuncionariosDAO
     public ObservableList<Funcionarios> list()
     {
         EntityManager manager = new JPAUtil().getEntityManager();
-        Query query = manager.createQuery("Select f from Funcionarios f where f");
+        Query query = manager.createQuery("Select f from Funcionarios f");
         ObservableList<Funcionarios> list = FXCollections.observableArrayList(query.getResultList());
         return list;
     }

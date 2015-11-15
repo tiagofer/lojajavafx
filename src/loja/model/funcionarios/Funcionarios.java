@@ -5,6 +5,7 @@
  */
 package loja.model.funcionarios;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -27,12 +28,13 @@ public class Funcionarios
     private Integer idFuncionarios;
     private String nome;
     private String cpf;
-    @ManyToOne
+    
+    @ManyToOne 
     private Empresa idEmpresa;
     
-    @ManyToOne
-    private FuncaoSistema idFuncaoSistema;
+//    @ManyToOne 
+//    private FuncaoSistema idFuncaoSistema;
     
-    @ManyToOne
+    @ManyToOne 
     private Cargo idCargo;
 }

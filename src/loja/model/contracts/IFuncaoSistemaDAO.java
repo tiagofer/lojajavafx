@@ -5,11 +5,14 @@
  */
 package loja.model.contracts;
 
+import javafx.collections.ObservableList;
+import loja.model.funcaosistema.FuncaoSistema;
+
 /**
  *
  * @author tiflami
  */
 public interface IFuncaoSistemaDAO
 {
-    
+    public ObservableList<FuncaoSistema> list();
 }

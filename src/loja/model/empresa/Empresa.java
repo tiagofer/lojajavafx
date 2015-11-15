@@ -5,6 +5,7 @@
  */
 package loja.model.empresa;
 
+import java.util.List;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -30,12 +31,12 @@ public class Empresa
     private String telefone;
     private String cel;
     
-    @OneToMany(mappedBy = "Funcionarios")
-    private Funcionarios idFuncionarios;
+    @OneToMany(mappedBy = "idEmpresa",targetEntity = Funcionarios.class)
+    private List<Funcionarios> Funcionarios;
 
-    public Funcionarios getIdFuncionarios()
+    public List<Funcionarios> getIdFuncionarios()
     {
-        return idFuncionarios;
+        return Funcionarios;
     }
 
     public Integer getIdEmpresa()

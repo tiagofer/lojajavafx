@@ -5,6 +5,7 @@
  */
 package loja.model.funcaosistema;
 
+import java.util.List;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -26,13 +27,13 @@ public class FuncaoSistema
     private Integer idFuncaoSistema;
     private String nome;
     
-    @OneToMany(mappedBy = "Funcionarios")
-    private Funcionarios idFuncionarios;
-
-    public Funcionarios getIdFuncionarios()
-    {
-        return idFuncionarios;
-    }
+//    @OneToMany(mappedBy = "Funcionarios")
+//    private List<Funcionarios> Funcionarios;
+//
+//    public List<Funcionarios> getFuncionarios()
+//    {
+//        return Funcionarios;
+//    }
 
     public Integer getIdFuncaoSistema()
     {

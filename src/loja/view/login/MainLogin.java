@@ -32,6 +32,7 @@ public class MainLogin extends Application
         stage.setScene(scene);
         stage.setTitle("Login - Loja FX");
         stage.show();
+        MainLogin.stage = stage;
     }
     
     public static Stage getStage()

@@ -5,6 +5,7 @@
  */
 package loja.model.cargo;
 
+import java.util.List;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
@@ -36,8 +37,13 @@ public class Cargo
         return nome;
     }
 
-    @OneToMany(mappedBy = "Funcionarios")
-    private Funcionarios idFuncionarios;    
+    @OneToMany(mappedBy = "idCargo",targetEntity = Funcionarios.class)
+    private List<Funcionarios> Funcionarios;    
+
+    public List<Funcionarios> getFuncionarios()
+    {
+        return Funcionarios;
+    }
     
     public Integer getIdCargo()
     {
