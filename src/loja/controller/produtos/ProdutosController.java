@@ -19,15 +19,14 @@ public class ProdutosController extends ProdutosScreenController implements Init
 {
 
     @Override
+    public void initialize(URL location, ResourceBundle resources)
+    {
+        
+    }
+ 
+    @Override
     public void setScreenParent(ScreenController screenPage)
     {
         super.controller = screenPage;
-    }
-
-    @Override
-    public void initialize(URL location, ResourceBundle resources)
-    {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-    
+    }   
 }

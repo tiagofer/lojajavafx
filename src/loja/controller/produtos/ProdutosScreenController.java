@@ -11,7 +11,9 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
+import loja.controller.login.LoginController;
 import loja.controller.screen.ScreenController;
+import loja.controller.screen.ScreenFramework;
 
 /**
  *
@@ -72,16 +74,21 @@ public abstract class ProdutosScreenController
 
     @FXML
     void goToClientes(ActionEvent event) {
-
+        controller.setScreen(ScreenFramework.clientes);
     }
 
     @FXML
     void goToVendas(ActionEvent event) {
-
+        controller.setScreen(ScreenFramework.vendas);
     }
 
     @FXML
     void goToMenu(ActionEvent event) {
-
+        if (LoginController.getUsuarioLogado().equals("admin"))
+        {
+            controller.setScreen(ScreenFramework.mainMenuAdm);     
+        } else {
+            controller.setScreen(ScreenFramework.mainMenuUsu);
+        }
     }
 }

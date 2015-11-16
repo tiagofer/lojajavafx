@@ -14,12 +14,10 @@ import loja.controller.screen.ScreenController;
  */
 public class VendasController extends VendasScreenController implements ILoadScreen
 {
-
-    ScreenController vendasController;
     @Override
     public void setScreenParent(ScreenController screenPage)
     {
-        vendasController = screenPage;
+        super.controller = screenPage;
     }
     
 }

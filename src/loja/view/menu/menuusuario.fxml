@@ -8,7 +8,7 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane fx:id="menuPane" prefHeight="800.0" prefWidth="1280.0" style="-fx-max-width: 1280; -fx-max-height: 800;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane fx:id="menuPane" prefHeight="800.0" prefWidth="1280.0" style="-fx-max-width: 1280; -fx-max-height: 800;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="loja.controller.menu.MenuUsuController">
    <children>
       <HBox fx:id="hBoxPane" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="100.0" prefWidth="1280.0" style="-fx-background-color: PaleTurquoise;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
@@ -21,7 +21,7 @@
       </HBox>
       <HBox fx:id="hBoxMenu" alignment="CENTER" layoutX="-6.0" layoutY="300.0" prefHeight="200.0" prefWidth="1280.0" spacing="100.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
          <children>
-            <Button fx:id="btnClient" mnemonicParsing="false" text="Cadastrar Clientes" textAlignment="CENTER">
+            <Button fx:id="btnClient" mnemonicParsing="false" onAction="#goToClientes" text="Cadastrar Clientes" textAlignment="CENTER">
                <graphic>
                   <ImageView fx:id="imgSales" fitHeight="128.0" fitWidth="128.0" focusTraversable="true" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -30,7 +30,7 @@
                   </ImageView>
                </graphic>
             </Button>
-            <Button fx:id="btnProdutos" mnemonicParsing="false" text="Cadastrar Produtos">
+            <Button fx:id="btnProdutos" mnemonicParsing="false" onAction="#goToProdutos" text="Cadastrar Produtos">
                <graphic>
                   <ImageView fx:id="imgClients" fitHeight="128.0" fitWidth="128.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -39,7 +39,7 @@
                   </ImageView>
                </graphic>
             </Button>
-            <Button fx:id="btnVendas" mnemonicParsing="false" text="Vendas">
+            <Button fx:id="btnVendas" mnemonicParsing="false" onAction="#goToVendas" text="Vendas">
                <graphic>
                   <ImageView fx:id="imgProducts" fitHeight="128.0" fitWidth="128.0" pickOnBounds="true" preserveRatio="true">
                      <image>

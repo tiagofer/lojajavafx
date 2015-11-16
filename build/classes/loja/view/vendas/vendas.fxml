@@ -5,32 +5,99 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="loja.controller.vendas.VendasController">
    <children>
-      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="1280.0" style="-fx-background-color: PaleTurquoise;">
+      <HBox fx:id="hBoxPane" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="100.0" prefWidth="1280.0" style="-fx-background-color: PaleTurquoise;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Modulo Vendas">
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Modulo de Vendas">
+               <font>
+                  <Font size="41.0" />
+               </font>
+            </Text>
+         </children>
+      </HBox>
+      <FlowPane layoutX="401.0" layoutY="156.0" prefHeight="200.0" prefWidth="200.0" />
+      <TitledPane animated="false" collapsible="false" layoutX="-1.0" layoutY="100.0" prefHeight="159.0" prefWidth="943.0" text="Clientes" AnchorPane.bottomAnchor="541.0" AnchorPane.topAnchor="100.0">
+         <content>
+            <AnchorPane prefHeight="174.0" prefWidth="941.0">
+               <children>
+                  <TextField fx:id="txtCodCliente" layoutX="32.0" layoutY="29.0" prefHeight="25.0" prefWidth="73.0" promptText="Cód..." />
+                  <TextField fx:id="txtNomeCliente" layoutX="136.0" layoutY="29.0" promptText="Nome..." />
+                  <DatePicker fx:id="dataCompra" layoutX="709.0" layoutY="29.0" promptText="Data da Compra" AnchorPane.leftAnchor="698.6" AnchorPane.rightAnchor="34.0" />
+                  <ComboBox fx:id="cbClientes" layoutX="424.0" layoutY="29.0" prefHeight="25.0" prefWidth="265.0" promptText="Selecionar Cliente" />
+                  <TextField fx:id="txtEnderecoCliente" layoutX="32.0" layoutY="73.0" promptText="Endereço" />
+                  <TextField fx:id="txtTelefoneCliente" layoutX="239.0" layoutY="73.0" promptText="Telefone" />
+                  <Button fx:id="btnBuscarCliente" layoutX="332.0" layoutY="29.0" mnemonicParsing="false" text="Buscar" />
+                  <Button fx:id="btnInserirCliente" layoutX="506.0" layoutY="73.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="190.0" text="Inserir" />
+               </children>
+            </AnchorPane>
+         </content>
+      </TitledPane>
+      <TitledPane animated="false" collapsible="false" layoutX="-1.0" layoutY="259.0" prefHeight="134.0" prefWidth="943.0" text="Produto">
+         <content>
+            <AnchorPane prefHeight="115.0" prefWidth="941.0">
+               <children>
+                  <TextField fx:id="txtCodProduto" layoutX="34.0" layoutY="25.0" prefHeight="25.0" prefWidth="78.0" promptText="Cód..." />
+                  <TextField layoutX="137.0" layoutY="25.0" promptText="Cód. Barras" />
+                  <TextField fx:id="txtQuantidadeProduto" layoutX="37.0" layoutY="62.0" prefHeight="25.0" prefWidth="72.0" promptText="Quantidade" />
+                  <TextField fx:id="txtPrecoUnitario" layoutX="137.0" layoutY="62.0" promptText="Preço unitário" />
+                  <Button fx:id="btnBuscarProduto" layoutX="359.0" layoutY="25.0" mnemonicParsing="false" text="Buscar" />
+                  <Button fx:id="btnInserirProduto" layoutX="617.0" layoutY="62.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="190.0" text="Inserir" />
+                  <TextField fx:id="txtDescricaoProduto" layoutX="458.0" layoutY="25.0" prefHeight="25.0" prefWidth="365.0" promptText="Descricao" />
+                  <TextField fx:id="txtValorTotal" layoutX="349.0" layoutY="62.0" promptText="Valor Total" />
+               </children>
+            </AnchorPane>
+         </content>
+      </TitledPane>
+      <TableView layoutX="-1.0" layoutY="393.0" prefHeight="409.0" prefWidth="943.0" AnchorPane.bottomAnchor="-2.0" AnchorPane.topAnchor="393.0">
+        <columns>
+          <TableColumn fx:id="tblColCod" prefWidth="75.0" text="Codigo" />
+          <TableColumn fx:id="tblColProduto" prefWidth="75.0" text="Produto" />
+            <TableColumn fx:id="tblColDescricao" prefWidth="416.0" text="Descricao" />
+            <TableColumn fx:id="tblColQuantidade" minWidth="0.0" prefWidth="107.0" text="Quantidade" />
+            <TableColumn fx:id="tblColValorUn" prefWidth="128.0" text="Valor Un" />
+            <TableColumn fx:id="tblColTotal" prefWidth="141.0" text="Total " />
+        </columns>
+      </TableView>
+      <Pane layoutX="941.0" layoutY="100.0" prefHeight="200.0" prefWidth="343.0" style="-fx-background-color: turquoise;" AnchorPane.bottomAnchor="500.0" AnchorPane.leftAnchor="941.0" AnchorPane.topAnchor="100.0">
+         <children>
+            <Text layoutX="40.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sub-total">
+               <font>
+                  <Font size="54.0" />
+               </font>
+            </Text>
+            <Text fx:id="textoSubTotal" layoutX="185.0" layoutY="129.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0,00">
+               <font>
+                  <Font size="46.0" />
+               </font>
+            </Text>
+            <Text layoutX="45.0" layoutY="129.0" strokeType="OUTSIDE" strokeWidth="0.0" text="R$">
                <font>
                   <Font size="46.0" />
                </font>
             </Text>
          </children>
-      </HBox>
-      <GridPane layoutX="5.0" layoutY="101.0" prefHeight="272.0" prefWidth="1272.0">
-        <columnConstraints>
-            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-        </columnConstraints>
-        <rowConstraints>
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-        </rowConstraints>
+      </Pane>
+      <Pane layoutX="941.0" layoutY="300.0" prefHeight="200.0" prefWidth="343.0" style="-fx-background-color: DarkTurquoise;" AnchorPane.leftAnchor="941.0">
          <children>
-            <TextField promptText="Buscar Cliente..." />
+            <Text layoutX="101.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total">
+               <font>
+                  <Font size="54.0" />
+               </font>
+            </Text>
+            <Text fx:id="textoTotal" layoutX="185.0" layoutY="129.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0,00">
+               <font>
+                  <Font size="46.0" />
+               </font>
+            </Text>
+            <Text layoutX="45.0" layoutY="129.0" strokeType="OUTSIDE" strokeWidth="0.0" text="R$">
+               <font>
+                  <Font size="46.0" />
+               </font>
+            </Text>
          </children>
-      </GridPane>
+      </Pane>
+      <Button fx:id="btnFecharVendas" layoutX="1026.0" layoutY="509.0" mnemonicParsing="false" onAction="#efetivarVenda" prefHeight="100.0" prefWidth="200.0" text="Fechar Venda (F4)" textAlignment="CENTER" AnchorPane.leftAnchor="1026.0" />
+      <Button fx:id="btnMenu" layoutX="1051.0" layoutY="636.0" mnemonicParsing="false" onAction="#goToMenu" prefHeight="25.0" prefWidth="150.0" text="Menu (F2)" textAlignment="CENTER" AnchorPane.leftAnchor="1051.0" />
    </children>
 </AnchorPane>

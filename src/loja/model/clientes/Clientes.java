@@ -27,6 +27,17 @@ public class Clientes implements Serializable
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     private Integer idClientes;
     private String nome;
+    private String cpf;
+
+    public String getCpf()
+    {
+        return cpf;
+    }
+
+    public void setCpf(String cpf)
+    {
+        this.cpf = cpf;
+    }
     private String endereco;
     private String telefone;
     private String cel;

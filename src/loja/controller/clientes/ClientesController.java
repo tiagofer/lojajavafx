@@ -46,6 +46,10 @@ public class ClientesController extends ClientesScreenController implements Init
     
     @FXML
     private TableColumn<Clientes, String> tblColEndereco;
+    
+    @FXML
+    private TableColumn<Clientes, String> tblColCpf;
+    
 
     @FXML
     private TextField txClientCel;
@@ -58,6 +62,9 @@ public class ClientesController extends ClientesScreenController implements Init
 
     @FXML
     private TextField txClientTel;
+    
+    @FXML
+    private TextField txCpf;
     
     ScreenController clientesController;
     
@@ -76,6 +83,7 @@ public class ClientesController extends ClientesScreenController implements Init
                cliente.setCel(txClientCel.getText());
                cliente.setEndereco(txClientAdress.getText());
                cliente.setTelefone(txClientTel.getText());
+               cliente.setCpf(txCpf.getText());
                clientedao.add(cliente);
                initializeTable(clientedao);
                clearFields();
@@ -96,6 +104,7 @@ public class ClientesController extends ClientesScreenController implements Init
         txClientCel.setText("");
         txClientName.setText("");
         txClientTel.setText("");
+        txCpf.setText("");
     }
     
     public void listData()
@@ -112,11 +121,12 @@ public class ClientesController extends ClientesScreenController implements Init
         tblColNome.setCellValueFactory(new PropertyValueFactory<>("nome"));
         tblColTelefone.setCellValueFactory(new PropertyValueFactory<>("telefone"));
         tblColId.setCellValueFactory(new PropertyValueFactory<>("idClientes"));
+        tblColCpf.setCellValueFactory(new PropertyValueFactory<>("cpf"));
     }
 
     @Override
     public void setScreenParent(ScreenController screenPage)
     {
-       clientesController = screenPage;
+       super.controller = screenPage;
     }
 }

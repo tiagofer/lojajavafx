@@ -9,10 +9,10 @@
    <children>
       <GridPane alignment="CENTER" layoutX="786.0" layoutY="101.0" prefHeight="298.0" prefWidth="480.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="101.0">
          <children>
-            <TextField fx:id="txClientName" prefHeight="25.0" prefWidth="461.0" GridPane.columnIndex="1" />
-            <TextField fx:id="txClientAdress" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <TextField fx:id="txClientTel" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-            <TextField fx:id="txClientCel" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <TextField fx:id="txProdutoNome" prefHeight="25.0" prefWidth="461.0" GridPane.columnIndex="1" />
+            <TextField fx:id="txProdutoDescricao" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="txProdutoValor" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="txProdutoQuantidade" GridPane.columnIndex="1" GridPane.rowIndex="3" />
             <Button fx:id="btnInsert" mnemonicParsing="false" prefHeight="25.0" prefWidth="150.0" text="Cadastrar (F5)" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="4" />
             <Label text="Nome" />
             <Label text="Descricao" GridPane.rowIndex="1" />

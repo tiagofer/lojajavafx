@@ -112,9 +112,7 @@ public class LoginController implements Initializable, ILoadScreen
                  try
                 {
                     LoginController.usuarioLogado = "usu";
-                    MainMenu menu = FactoryView.createMainMenu();
-                    menu.start(new Stage());
-                    MainLogin.getStage().close();
+                    goToMainMenuUsu(event);
                 } catch (Exception e)
                 {
                     e.printStackTrace();
@@ -130,6 +128,11 @@ public class LoginController implements Initializable, ILoadScreen
     private void goToMainMenuAdm(ActionEvent event)
     {
         loginController.setScreen(ScreenFramework.mainMenuAdm);
+    }
+    
+    private void goToMainMenuUsu(ActionEvent event)
+    {
+        loginController.setScreen(ScreenFramework.mainMenuUsu);
     }
 
 }

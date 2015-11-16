@@ -122,7 +122,7 @@
                             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                           </rowConstraints>
                            <children>
-                              <Button fx:id="btnVendas" mnemonicParsing="false" prefHeight="40.0" prefWidth="200.0" text="Vendas (F4)" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                              <Button fx:id="btnVendas" mnemonicParsing="false" onAction="#goToVendas" prefHeight="40.0" prefWidth="200.0" text="Vendas (F4)" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                                  <graphic>
                                     <ImageView fx:id="imgProducts" fitHeight="53.0" fitWidth="65.0" pickOnBounds="true" preserveRatio="true">
                                        <image>

@@ -94,7 +94,7 @@ public abstract class FuncionariosScreenController
 
     @FXML
     void goToMenu(ActionEvent event) {
-         if (LoginController.getUsuarioLogado().equals("admin"))
+        if (LoginController.getUsuarioLogado().equals("admin"))
         {
             controller.setScreen(ScreenFramework.mainMenuAdm);     
         } else {

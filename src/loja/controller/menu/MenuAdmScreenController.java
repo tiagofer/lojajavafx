@@ -47,4 +47,10 @@ public class MenuAdmScreenController
 //    void loadCadastrarFornecedor(ActionEvent event) {
 //        controller.setScreen(ScreenFramework.)
 //    }
+    
+    @FXML
+    void goToVendas(ActionEvent event)
+    {
+        controller.setScreen(ScreenFramework.vendas);
+    }
 }
