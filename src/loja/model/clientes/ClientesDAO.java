@@ -18,7 +18,7 @@ import loja.model.util.JPAUtil;
  */
 public class ClientesDAO implements IClientesDAO
 {
-
+    
     @Override
     public void add(Clientes cliente)
     {
@@ -32,7 +32,11 @@ public class ClientesDAO implements IClientesDAO
     @Override
     public void delete(Clientes cliente)
     {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        EntityManager manager = new JPAUtil().getEntityManager();
+        manager.getTransaction().begin();
+        manager.merge(cliente);
+        manager.remove(manager.getReference(Clientes.class, cliente.getIdClientes()));
+        manager.getTransaction().commit();
     }
 
     @Override
@@ -45,9 +49,22 @@ public class ClientesDAO implements IClientesDAO
     }
 
     @Override
-    public Clientes find(String name)
+    public void update(Clientes cliente)
     {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        EntityManager manager = new JPAUtil().getEntityManager();
+        manager.getTransaction().begin();
+        manager.merge(cliente);
+        manager.getTransaction().commit();
+    }
+
+    @Override
+    public Clientes findById(Integer id)
+    {
+        EntityManager manager = new JPAUtil().getEntityManager();
+        Query query = manager.createQuery("select c from Clientes c where c.idClientes=:pId");
+        query.setParameter("pId", id);
+        Clientes cliente = (Clientes) query.getSingleResult();
+        return cliente;
     }
     
 }

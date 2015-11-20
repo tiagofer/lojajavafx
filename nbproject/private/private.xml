@@ -3,28 +3,31 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/home/tiflami/NetBeansProjects/LojaRoupaFX/test/loja/testes/TesteFuncionarios.java</file>
-            <file>file:/home/tiflami/NetBeansProjects/LojaRoupaFX/src/loja/view/clientes/clientes.fxml</file>
-            <file>file:/home/tiflami/NetBeansProjects/LojaRoupaFX/src/loja/model/funcionarios/Funcionarios.java</file>
+            <file>file:/home/tiflami/NetBeansProjects/LojaRoupaFX/src/loja/view/vendas/vendas.fxml</file>
+            <file>file:/home/tiflami/NetBeansProjects/LojaRoupaFX/src/loja/controller/login/LoginController.java</file>
+            <file>file:/home/tiflami/NetBeansProjects/LojaRoupaFX/src/loja/model/contracts/IFuncionariosDAO.java</file>
+            <file>file:/home/tiflami/NetBeansProjects/LojaRoupaFX/src/loja/model/clientes/ClientesDAO.java</file>
+            <file>file:/home/tiflami/NetBeansProjects/LojaRoupaFX/src/loja/controller/screen/ScreenController.java</file>
+            <file>file:/home/tiflami/NetBeansProjects/LojaRoupaFX/src/loja/controller/produtos/ProdutosController.java</file>
+            <file>file:/home/tiflami/NetBeansProjects/LojaRoupaFX/src/loja/controller/menu/MenuAdmController.java</file>
+            <file>file:/home/tiflami/NetBeansProjects/LojaRoupaFX/src/loja/view/produtos/produtos.fxml</file>
+            <file>file:/home/tiflami/NetBeansProjects/LojaRoupaFX/src/loja/view/menu/menuusuario.fxml</file>
+            <file>file:/home/tiflami/NetBeansProjects/LojaRoupaFX/src/loja/model/contracts/ICargoDAO.java</file>
+            <file>file:/home/tiflami/NetBeansProjects/LojaRoupaFX/src/loja/controller/clientes/ClientesScreenController.java</file>
+            <file>file:/home/tiflami/NetBeansProjects/LojaRoupaFX/src/loja/controller/funcionarios/FuncionariosScreenController.java</file>
+            <file>file:/home/tiflami/NetBeansProjects/LojaRoupaFX/src/loja/controller/menu/MenuAdmScreenController.java</file>
+            <file>file:/home/tiflami/NetBeansProjects/LojaRoupaFX/src/loja/controller/produtos/ProdutosScreenController.java</file>
+            <file>file:/home/tiflami/NetBeansProjects/LojaRoupaFX/src/loja/controller/menu/MenuUsuScreenController.java</file>
             <file>file:/home/tiflami/NetBeansProjects/LojaRoupaFX/src/loja/controller/screen/ScreenFramework.java</file>
             <file>file:/home/tiflami/NetBeansProjects/LojaRoupaFX/src/loja/view/menuadm/MainMenuAdm.java</file>
-            <file>file:/home/tiflami/NetBeansProjects/LojaRoupaFX/src/loja/controller/login/LoginController.java</file>
-            <file>file:/home/tiflami/NetBeansProjects/LojaRoupaFX/src/loja/view/login/MainLogin.java</file>
-            <file>file:/home/tiflami/NetBeansProjects/LojaRoupaFX/src/loja/view/login/login.fxml</file>
+            <file>file:/home/tiflami/NetBeansProjects/LojaRoupaFX/src/loja/controller/menu/MenuUsuController.java</file>
+            <file>file:/home/tiflami/NetBeansProjects/LojaRoupaFX/src/loja/model/contracts/IGenericDAO.java</file>
             <file>file:/home/tiflami/NetBeansProjects/LojaRoupaFX/src/loja/controller/clientes/ClientesController.java</file>
-            <file>file:/home/tiflami/NetBeansProjects/LojaRoupaFX/src/loja/view/clientes/MainClientes.java</file>
-            <file>file:/home/tiflami/NetBeansProjects/LojaRoupaFX/src/loja/controller/screen/ScreenController.java</file>
-            <file>file:/home/tiflami/NetBeansProjects/LojaRoupaFX/test/loja/testes/TesteUsuarios.java</file>
-            <file>file:/home/tiflami/NetBeansProjects/LojaRoupaFX/src/loja/model/usuarios/Usuarios.java</file>
-            <file>file:/home/tiflami/NetBeansProjects/LojaRoupaFX/src/loja/model/contracts/IUsuariosDAO.java</file>
-            <file>file:/home/tiflami/NetBeansProjects/LojaRoupaFX/src/loja/model/cargo/Cargo.java</file>
-            <file>file:/home/tiflami/NetBeansProjects/LojaRoupaFX/src/loja/model/funcaosistema/FuncaoSistema.java</file>
-            <file>file:/home/tiflami/NetBeansProjects/LojaRoupaFX/src/loja/model/util/Factory.java</file>
-            <file>file:/home/tiflami/NetBeansProjects/LojaRoupaFX/src/loja/model/util/FactoryView.java</file>
-            <file>file:/home/tiflami/NetBeansProjects/LojaRoupaFX/src/loja/controller/screen/ILoadScreen.java</file>
-            <file>file:/home/tiflami/NetBeansProjects/LojaRoupaFX/src/loja/model/usuarios/UsuariosDAO.java</file>
-            <file>file:/home/tiflami/NetBeansProjects/LojaRoupaFX/src/loja/model/funcionarios/FuncionariosDAO.java</file>
-            <file>file:/home/tiflami/NetBeansProjects/LojaRoupaFX/src/loja/model/empresa/Empresa.java</file>
+            <file>file:/home/tiflami/NetBeansProjects/LojaRoupaFX/src/loja/controller/funcionarios/FuncionariosController.java</file>
+            <file>file:/home/tiflami/NetBeansProjects/LojaRoupaFX/src/loja/controller/vendas/VendasScreenController.java</file>
+            <file>file:/home/tiflami/NetBeansProjects/LojaRoupaFX/src/loja/model/clientes/IClientesDAO.java</file>
+            <file>file:/home/tiflami/NetBeansProjects/LojaRoupaFX/src/loja/controller/vendas/VendasController.java</file>
+            <file>file:/home/tiflami/NetBeansProjects/LojaRoupaFX/src/loja/model/clientes/Clientes.java</file>
         </group>
     </open-files>
 </project-private>

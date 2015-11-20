@@ -32,13 +32,13 @@
             <Label text="Endereço" GridPane.rowIndex="2" />
             <Label text="Telefone" GridPane.rowIndex="3" />
             <Label text="Celular" GridPane.rowIndex="4" />
-            <Button fx:id="btnDel" mnemonicParsing="false" prefHeight="25.0" prefWidth="150.0" text="Excluir (F7)" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="6" />
-            <Button fx:id="btnUpdate" mnemonicParsing="false" prefHeight="25.0" prefWidth="150.0" text="Atualizar (F6)" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+            <Button fx:id="btnDel" mnemonicParsing="false" onAction="#deleteClientes" prefHeight="25.0" prefWidth="150.0" text="Excluir (F7)" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+            <Button fx:id="btnUpdate" mnemonicParsing="false" onAction="#updateData" prefHeight="25.0" prefWidth="150.0" text="Atualizar (F6)" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="7" />
             <TextField fx:id="txCpf" GridPane.columnIndex="1" GridPane.rowIndex="1" />
             <Label text="CPF" GridPane.rowIndex="1" />
          </children>
       </GridPane>
-      <TableView fx:id="tblClientList" layoutY="100.0" prefHeight="698.0" prefWidth="777.0" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="503.0" AnchorPane.topAnchor="100.0">
+      <TableView fx:id="tblClientList" layoutY="100.0" onSort="#updateData" prefHeight="698.0" prefWidth="777.0" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="503.0" AnchorPane.topAnchor="100.0">
         <columns>
           <TableColumn fx:id="tblColId" prefWidth="68.0" text="id" />
           <TableColumn fx:id="tblColNome" prefWidth="236.0" text="Nome" />

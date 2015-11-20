@@ -16,5 +16,6 @@ public interface IClientesDAO
     public void add(Clientes cliente);
     public void delete(Clientes cliente);
     public List list ();
-    public Clientes find (String name);
+    public void update(Clientes cliente);
+    public Clientes findById(Integer id);
 }
